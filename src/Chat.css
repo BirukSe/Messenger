@@ -1,0 +1,85 @@
+/* General Styles */
+body {
+    background-color: black;
+    font-family: Arial, sans-serif;
+}
+
+/* Main Chat Container */
+.the_main {
+    position: relative;
+    width: 90%; /* Responsive width */
+    max-width: 400px; /* Limit max width */
+    height: 80vh; /* Use viewport height */
+    border-radius: 15px; /* Rounded corners */
+    border: 1px solid black;
+    background-color: black;
+    overflow: hidden; /* Clip overflowing content */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    margin: 20px auto; /* Center horizontally with margin */
+}
+
+/* Header Styles */
+.chat-header {
+    padding: 10px;
+    background-color: hsl(210, 100%, 90%);
+    text-align: center;
+}
+
+/* Chat Body */
+.chat-body {
+    flex-grow: 1; /* Allow body to grow */
+    padding: 10px;
+    overflow-y: auto; /* Enable scrolling */
+    display: flex;
+    flex-direction: column;
+    color: white;
+     /* Stack messages */
+}
+
+/* Message Styles */
+.message {
+    max-width: 70%; /* Limit width */
+    padding: 10px;
+    border-radius: 15px; /* Rounded corners */
+    margin: 5px 0;
+    word-wrap: break-word; /* Wrap long words */
+}
+
+.sent {
+    background-color: hsl(150, 70%, 80%); /* Light green */
+    align-self: flex-end; /* Align sent messages right */
+}
+
+.received {
+    background-color: black; /* Light grey */
+    align-self: flex-start; /* Align received messages left */
+}
+
+/* Chat Footer */
+.chat-footer {
+    display: flex;
+    padding: 10px;
+    background-color: hsl(210, 100%, 90%);
+}
+
+.chat-footer .input {
+    flex-grow: 1; /* Take available space */
+    margin-right: 10px; /* Space between input and button */
+    padding: 10px; /* Inner padding */
+    border-radius: 20px; /* Rounded input */
+    border: 1px solid black;
+}
+
+.chat-footer button {
+    background-color: hsl(210, 100%, 70%);
+    border: none;
+    color: white;
+    border-radius: 20px; /* Rounded button */
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.chat-footer button:hover {
+    background-color: hsl(210, 100%, 60%); /* Darker on hover */
+}
