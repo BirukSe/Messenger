@@ -1,0 +1,48 @@
+body{
+  background-color: black;
+
+}
+.App {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Full viewport height */
+  margin: 0; /* Remove default margin */
+  background: hsl(270, 100%, 90%);
+   /* Set your background here if needed */
+}
+
+.batman {
+  width: 590%; /* Responsive width */
+  max-width: 600px; /* Max width for larger screens */
+  height: 50%; /* Allow height to adjust */
+  text-align: center;
+  padding: 20px; /* Adjust padding for better spacing */
+  background: blanchedalmond;
+  border-radius: 10px; /* Optional for rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transform: translate(-10%, -0%); /* Optional for depth */
+}
+
+.batman input{
+  height: 50px;
+  
+}
+.title{
+ /* Allow height to adjust */
+  text-align: center;
+  display: inline-flex;
+  font-size: 25px;
+  position: absolute;
+  top: 120px;
+  
+  font-size: 40px;
+  
+  transform: translate(-11%, -50%);
+
+  
+}
+.App .div{
+  background-color: hsl(255, 90%, 60%);
+}
+
