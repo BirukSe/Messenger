@@ -51,24 +51,126 @@
 //   );
 // }
 
-// export default App;
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Signup from './Pages/Signup/Signup'; // Adjust the path as needed
-import Login from './Pages/Login/Login'; // Import the Login component
-import Home from './Pages/Home/Home'; // Import the Home component
+// // export default App;
+// import React, { useState } from 'react';
+// import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+// import Signup from './Pages/Signup/Signup'; 
+// import Login from './Pages/Login/Login'; 
+// import Home from './Pages/Home/Home'; 
+// import Room from './Pages/Room/Room'; 
+// import Private from './Pages/Private/Private';
 
-function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Signup />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/login" element={<Login />} /> {/* Add the login route */}
+// function App() {
+//   const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+//   // Function to handle login or signup
+//   const handleAuthentication = () => {
+//     setIsAuthenticated(true);
+//   };
+
+//   return (
+//     <Router>
+//       {/* Conditionally render Home navigation */}
+//       {isAuthenticated && <Home />}
+      
+//       <Routes>
+//         <Route path="/" element={<Signup onAuthenticate={handleAuthentication} />} />
+//         <Route path="/signup" element={<Signup onAuthenticate={handleAuthentication} />} />
+//         <Route path="/login" element={<Login onAuthenticate={handleAuthentication} />} />
+        
+//         {/* Protected routes */}
+//         <Route path="/room" element={isAuthenticated ? <Room /> : <Navigate to="/login" />} />
+//         <Route path="/private" element={<Private />} />
+        
+//         {/* Redirect to Home after login */}
+//         <Route path="/home" element={<Room />} />
+//       </Routes>
+//     </Router>
+//   );
+// }
+
+// export default App;
+
+// // import React, { useState } from 'react';
+// // import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+// // import Signup from './Pages/Signup/Signup'; 
+// // import Login from './Pages/Login/Login'; 
+// // import Home from './Pages/Home/Home'; 
+// // import Room from './Pages/Room/Room'; 
+// // import Private from './Pages/Private/Private';
+
+// // function App() {
+// //   const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+// //   // Function to handle login or signup
+// //   const handleAuthentication = () => {
+// //     setIsAuthenticated(true);
+// //   };
+
+// //   return (
+// //     <Router>
+// //       {/* Conditionally render Home navigation */}
+// //       {isAuthenticated && <Home />}
+      
+// //       <Routes>
+// //         <Route path="/" element={<Signup onAuthenticate={handleAuthentication} />} />
+// //         <Route path="/signup" element={<Signup onAuthenticate={handleAuthentication} />} />
+// //         <Route path="/login" element={<Login onAuthenticate={handleAuthentication} />} />
+        
+// //         {/* Protected routes */}
+// //         <Route path="/room" element={isAuthenticated ? <Room /> : <Navigate to="/login" />} />
+// //         <Route path="/private" element={<Private />} />
+        
+// //         {/* Redirect to Home after login */}
+// //         <Route path="/home" element={<Room />} />
+// //       </Routes>
+// //     </Router>
+// //   );
+// // }
+
+// // export default App;
+
+
+
+
+import React, {useState} from 'react';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import { AuthProvider } from '../src/Pages/auth';
+import Login from './Pages/Login/Login';
+import Home from './Pages/Home/Home';
+import Private from './Pages/Private/Private';
+import Signup from './Pages/Signup/Signup';
+import Room from './Pages/Room/Room';
+
+const App = () => {
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
+    const [username, setUsername] = useState('');
+
+    const handleAuthenticate = (username) => {
+         setUsername(username); // Store the actual username
+     };
+     const handleAuthentication = () => {
+          setIsAuthenticated(true);
+          };
+    return (
+        <AuthProvider>
+            <Router>
+            {isAuthenticated && <Home />}
+                <Routes>
+                <Route path="/" element={<Signup onAuthenticate={handleAuthentication} />} />
+       <Route path="/signup" element={<Signup onAuthenticate={handleAuthentication} />} />
+         <Route path="/login" element={<Login onAuthenticate={handleAuthentication} />} />
+        
+        {/* Protected routes */}
+        <Route path="/room" element={<Room />} />
+        <Route path="/private" element={<Private />} />
         <Route path="/home" element={<Home />} />
-      </Routes>
-    </Router>
-  );
-}
+
+                    {/* Other routes */}
+                </Routes>
+            </Router>
+        </AuthProvider>
+    );
+};
 
 export default App;

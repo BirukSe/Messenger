@@ -1,68 +1,88 @@
 .login-page {
-    display: flex;
-    height: 100vh; /* Full viewport height */
-    background-color: #f0f0f0; /* Light background for better contrast */
-  }
+  display: flex;
+  height: 100vh; /* Full viewport height */
+  background-color: hsl(209, 39%, 38%); /* Light background for better contrast */
+}
+
+.background-image {
+  flex: 1; /* Take half the width */
+  background-image: url('../../Welcome.png'); /* Replace with your image path */
+  background-size: cover; /* Cover the entire area */
+  background-position: center; /* Center the image */
+   /* Slightly transparent for a nice overlay effect */
+}
+.login-page{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 100vh;
+padding: 1rem;
+background: linear-gradient(135deg, #6a82fb, #fc5c7d); /* Gradient background */
+color: #fff;
+}
+.login-page h1{
   
-  .background-image {
-    flex: 1; /* Take half the width */
-    background-image: url('../../Welcome.png'); /* Replace with your image path */
-    background-size: cover; /* Cover the entire area */
-    background-position: center; /* Center the image */
-     /* Slightly transparent for a nice overlay effect */
-  }
-  
-  .login-form-container {
-    flex: 1; /* Take the other half */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center vertically */
-    align-items: center; /* Center horizontally */
-    background-color: white; /* White background for the form */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    border-radius: 8px; /* Rounded corners */
-    padding: 40px; /* Padding for the form */
-  }
-  
-  h2 {
-    color: #333; /* Darker header for better visibility */
-    margin-bottom: 20px; /* Space below the header */
-  }
-  
-  input {
-    border: 1px solid #ccc; /* Lighter border color */
-    border-radius: 4px; /* Rounded corners */
-    padding: 12px; /* Added padding for better UX */
-    width: 100%; /* Full width of the container */
-    margin-bottom: 20px; /* Space between fields */
-    font-size: 16px; /* Increase font size */
-  }
-  
-  input::placeholder {
-    color: #aaa; /* Lighter placeholder color */
-  }
-  
-  button {
-    transition: background-color 0.3s ease;
-    width: 100%; /* Full width for the button */
-    padding: 12px; /* Padding for the button */
-    background-color: #4CAF50; /* Green background */
-    color: white; /* White text color */
-    border: none; /* No border */
-    border-radius: 4px; /* Rounded corners */
-    font-size: 16px; /* Increase font size */
-  }
-  
-  button:hover {
-    background-color: #45a049; /* Darker green on hover */
-  }
-  
-  .error {
-    color: #ff4d4d; /* Error message color */
-    margin-bottom: 20px; /* Space below the error message */
-  }
-  
-  .text-blue-500 {
-    color: #1d4ed8; /* Link color */
-  }
-  
+    font-size: 5rem; /* Bigger font size */
+    text-align: center; /* Center the title */
+    color: #333; /* Darker text color */
+
+}
+#bura{
+  color: rgb(226, 226, 85);
+}
+.login-form-container{
+  width: 100%;
+  max-width: 400px;
+  background: #fff; /* White background for the form */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+  padding: 2rem; 
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f0f0; /* Light background */
+}
+h2 {
+  color: #333; /* Darker header for better visibility */
+  margin-bottom: 20px; /* Space below the header */
+}
+
+input {
+  border: 1px solid #ccc; /* Lighter border color */
+  border-radius: 4px; /* Rounded corners */
+  padding: 12px; /* Added padding for better UX */
+  width: 100%; /* Full width of the container */
+  margin-bottom: 20px; /* Space between fields */
+  font-size: 16px; /* Increase font size */
+}
+
+input::placeholder {
+  color: #aaa; /* Lighter placeholder color */
+}
+
+button {
+  transition: background-color 0.3s ease;
+  width: 100%; /* Full width for the button */
+  padding: 12px; /* Padding for the button */
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text color */
+  border: none; /* No border */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 16px; /* Increase font size */
+}
+
+button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.error {
+  color: #ff4d4d; /* Error message color */
+  margin-bottom: 20px; /* Space below the error message */
+}
+
+.text-blue-500 {
+  color: #1d4ed8; /* Link color */
+}

@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    align-items: stretch; /* Ensure both sides stretch to the same height */
+}
+
+.room, .private {
+    flex: 1; /* Make both sections take equal space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white; /* White background for both sections */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 8px; /* Rounded corners */
+    padding: 40px; /* Padding for both sections */
+}
+
+.separator {
+    width: 2px; /* Width of the vertical line */
+    background-color: #ccc; /* Color of the vertical line */
+}

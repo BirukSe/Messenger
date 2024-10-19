@@ -105,7 +105,8 @@ const Signup = () => {
 
     return (
         <div className="signup-page">
-            <div className="background-image"></div>
+            <h1>Welcome to Talkify</h1>
+           
             <div className="signup-form-container">
                 <h2 className="text-2xl font-semibold mb-4">Create a New Account</h2>
                 {error && <p className="text-red-500 mb-2">{error}</p>}

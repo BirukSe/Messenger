@@ -1,32 +1,36 @@
 .signup-page {
   display: flex;
-  height: 100vh; /* Full viewport height */
-  background-color: #f0f0f0; /* Light background for better contrast */
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 100vh;
+padding: 1rem;
+background: linear-gradient(135deg, #6a82fb, #fc5c7d); /* Gradient background */
+color: #fff;
+   /* Light background for better contrast */
 }
 
-.background-image {
-  flex: 1; /* Take half the width */
-  background-image: url('../../Welcome.png'); /* Replace with your image path */
-  background-size: cover; /* Cover the entire area */
-  background-position: center; /* Center the image */
-  opacity: 0.8; /* Slightly transparent for a nice overlay effect */
-}
+
 
 .signup-form-container {
-  flex: 1; /* Take the other half */
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Center vertically */
-  align-items: center; /* Center horizontally */
-  background-color: white; /* White background for the form */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  border-radius: 8px; /* Rounded corners */
-  padding: 40px; /* Padding for the form */
+  width: 100%;
+  max-width: 400px;
+  background: #fff; /* White background for the form */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+  padding: 2rem; 
+  position: relative;
+  top: 0px;
+  
+
+ /* Padding for the form */
 }
 
-h2 {
-  color: #333; /* Darker header for better visibility */
-  margin-bottom: 20px; /* Space below the header */
+.signup-page h1{
+  font-size: 5rem; /* Bigger font size */
+  text-align: center; /* Center the title */
+  color: #333; 
+  
 }
 
 input {
