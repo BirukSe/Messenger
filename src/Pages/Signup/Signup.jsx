@@ -18,7 +18,7 @@
 //         setError('');
 //         console.log('Sign Up:', { username, password });
 //         try {
-//             const response = await fetch('http://localhost:3001/signup', {
+//             const response = await fetch('http://lo/signup', {
 //                 method: 'POST',
 //                 headers: {
 //                     'Content-Type': 'application/json'
@@ -85,7 +85,7 @@ const Signup = () => {
         setError('');
         console.log('Sign Up:', { username, password });
         try {
-            const response = await fetch('http://localhost:3001/signup', {
+            const response = await fetch('https://enddata-gv63.onrender.com/signup', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

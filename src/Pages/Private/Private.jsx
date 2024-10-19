@@ -143,7 +143,7 @@
 // //             try {
 // //                 const response = await fetch('http://localhost:3001/users');
 // //                 if (!response.ok) {
-// //                     const errorData = await response.json();
+//                    const errorData = await response.json();
 // //                     throw new Error(errorData.message);
 // //                 }
 // //                 const data = await response.json();
@@ -199,7 +199,7 @@ import io from 'socket.io-client';
 import { useAuth } from '../../Pages/auth';
 
 
-const socket = io('http://localhost:3001');
+const socket = io('https://enddata-gv63.onrender.com');
 
 function Private() {
     const { username } = useAuth();
@@ -214,7 +214,7 @@ function Private() {
 
         const fetchUsers = async () => {
             try {
-                const response = await fetch('http://localhost:3001/users');
+                const response = await fetch('https://enddata-gv63.onrender.com/users');
                 if (!response.ok) {
                     const errorData = await response.json();
                     throw new Error(errorData.message);
